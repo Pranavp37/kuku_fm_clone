@@ -7,6 +7,9 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        
+      ),
       backgroundColor: const Color(0xff1a1b1f),
       body: SafeArea(
         child: Container(
@@ -62,14 +65,6 @@ class HomeScreen extends StatelessWidget {
                         color: Colors.white,
                         fontSize: 20,
                       ),
-                    ),
-                  ),
-                  const CircleAvatar(
-                    radius: 22,
-                    backgroundColor: ColorConstant.grayLightColor,
-                    child: Icon(
-                      Icons.shopping_bag_rounded,
-                      color: Colors.white,
                     ),
                   ),
                 ],

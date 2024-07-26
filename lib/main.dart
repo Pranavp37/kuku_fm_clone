@@ -11,11 +11,9 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      darkTheme: ThemeData(brightness: Brightness.dark),
-      themeMode: ThemeMode.dark,
+    return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: const HomeScreen(),
+      home: HomeScreen(),
     );
   }
 }
