@@ -1,5 +1,6 @@
 import 'package:bordered_text/bordered_text.dart';
 import 'package:flutter/material.dart';
+import 'package:kuku_fm_clone/utils/font_const.dart';
 
 class NumberCards extends StatelessWidget {
   const NumberCards({super.key, required this.index, required this.img});
@@ -39,6 +40,7 @@ class NumberCards extends StatelessWidget {
                       child: Text(
                     'VIP',
                     style: TextStyle(
+                      fontFamily: appfonts,
                       color: Color(0xff9e6220),
                       fontSize: 16.0,
                     ),
@@ -58,9 +60,11 @@ class NumberCards extends StatelessWidget {
             child: Text(
               '${index + 1}',
               style: const TextStyle(
-                  decoration: TextDecoration.none,
-                  color: Color(0xff1a1b1f),
-                  fontSize: 100),
+                decoration: TextDecoration.none,
+                color: Color(0xff1a1b1f),
+                letterSpacing: -16,
+                fontSize: 100,
+              ),
             ),
           ),
         )

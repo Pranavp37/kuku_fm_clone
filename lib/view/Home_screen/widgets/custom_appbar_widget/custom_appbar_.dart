@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:kuku_fm_clone/utils/color_constant.dart';
+import 'package:kuku_fm_clone/utils/font_const.dart';
 
 class CustomAppBar extends StatelessWidget {
   const CustomAppBar({
@@ -18,7 +19,8 @@ class CustomAppBar extends StatelessWidget {
             backgroundColor: Colors.orange,
             child: Text(
               'P',
-              style: TextStyle(color: Colors.white, fontSize: 28),
+              style: TextStyle(
+                  fontFamily: appfonts, color: Colors.white, fontSize: 28),
             ),
           ),
           SizedBox(
@@ -31,7 +33,8 @@ class CustomAppBar extends StatelessWidget {
                   Icons.search,
                   size: 30,
                 ),
-                hintStyle: const TextStyle(color: Colors.white),
+                hintStyle:
+                    const TextStyle(fontFamily: appfonts, color: Colors.white),
                 hintText: 'Search KuKu Fm',
                 suffixIcon: const Icon(
                   Icons.mic_none,

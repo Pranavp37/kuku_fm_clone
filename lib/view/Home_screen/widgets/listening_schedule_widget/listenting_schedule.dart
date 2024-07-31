@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:kuku_fm_clone/utils/font_const.dart';
 
 class ListeningSchedule extends StatelessWidget {
   const ListeningSchedule({
@@ -80,8 +81,7 @@ class ListeningSchedule extends StatelessWidget {
                       ],
                     ),
                   ),
-                  const Expanded(
-                      child: Padding(
+                  const Padding(
                     padding: EdgeInsets.symmetric(
                       horizontal: 16,
                     ),
@@ -91,12 +91,14 @@ class ListeningSchedule extends StatelessWidget {
                       children: [
                         Text(
                           'Episode 1/97',
-                          style:
-                              TextStyle(fontSize: 18, color: Color(0xff595a5c)),
+                          style: TextStyle(
+                              fontFamily: appfonts,
+                              fontSize: 18,
+                              color: Color(0xff595a5c)),
                         ),
                       ],
                     ),
-                  )),
+                  ),
                 ],
               ),
             ),
@@ -159,8 +161,7 @@ class ListeningSchedule extends StatelessWidget {
                       ],
                     ),
                   ),
-                  const Expanded(
-                      child: Padding(
+                  const Padding(
                     padding: EdgeInsets.symmetric(
                       horizontal: 16,
                     ),
@@ -173,6 +174,7 @@ class ListeningSchedule extends StatelessWidget {
                             Text(
                               'Add Now',
                               style: TextStyle(
+                                fontFamily: appfonts,
                                 fontSize: 16,
                                 color: Colors.white,
                               ),
@@ -189,7 +191,7 @@ class ListeningSchedule extends StatelessWidget {
                         ),
                       ],
                     ),
-                  )),
+                  ),
                 ],
               ),
             )

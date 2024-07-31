@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:kuku_fm_clone/utils/font_const.dart';
 import 'package:kuku_fm_clone/view/Chat_screen/chat_screen.dart';
 import 'package:kuku_fm_clone/view/Home_screen/home_screen.dart';
 import 'package:kuku_fm_clone/view/Myspace_screen/myspace_screen.dart';
@@ -39,6 +40,8 @@ class _BottonNavBarState extends State<BottonNavBar> {
           selectedItemColor: const Color(0xffffffff),
           backgroundColor: const Color(0xff1a1b1f),
           type: BottomNavigationBarType.fixed,
+          unselectedLabelStyle: const TextStyle(fontFamily: appfonts),
+          selectedLabelStyle: const TextStyle(fontFamily: appfonts),
           items: const [
             BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
             BottomNavigationBarItem(

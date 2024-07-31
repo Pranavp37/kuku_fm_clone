@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:kuku_fm_clone/utils/font_const.dart';
 
 class CardsWidget extends StatelessWidget {
   const CardsWidget({super.key, required this.img});
@@ -32,6 +33,7 @@ class CardsWidget extends StatelessWidget {
                 child: Text(
               'VIP',
               style: TextStyle(
+                fontFamily: appfonts,
                 color: Color(0xff9e6220),
                 fontSize: 16.0,
               ),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:kuku_fm_clone/utils/font_const.dart';
 
 class MainTitleWiget extends StatelessWidget {
   const MainTitleWiget({
@@ -21,6 +22,7 @@ class MainTitleWiget extends StatelessWidget {
               fontSize: 22,
               color: Colors.white,
               fontWeight: FontWeight.bold,
+              fontFamily: appfonts,
             ),
           ),
           IconButton(

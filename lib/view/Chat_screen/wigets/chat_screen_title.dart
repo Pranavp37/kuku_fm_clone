@@ -8,7 +8,10 @@ class ChatScreenTitle extends StatelessWidget {
     return Text(
       title,
       style: const TextStyle(
-          color: Colors.white, fontSize: 25, fontWeight: FontWeight.bold),
+          color: Colors.white,
+          fontSize: 25,
+          fontWeight: FontWeight.bold,
+          fontFamily: 'SignikaNegative'),
     );
   }
 }
