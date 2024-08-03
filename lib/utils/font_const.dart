@@ -1,1 +1,1 @@
-const String appfonts = 'SignikaNegative';
+const String appfonts = 'Poppins';

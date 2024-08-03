@@ -1,10 +1,8 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:kuku_fm_clone/dummydb.dart';
 import 'package:kuku_fm_clone/utils/color_constant.dart';
 import 'package:kuku_fm_clone/view/Chat_screen/wigets/Chat_profile_Widget/chat_profile.dart';
-import 'package:kuku_fm_clone/view/Chat_screen/wigets/chat_screen_title.dart';
+import 'package:kuku_fm_clone/view/Chat_screen/wigets/chat_ti/chat_screen_title.dart';
 
 class ChatScreen extends StatelessWidget {
   const ChatScreen({super.key});

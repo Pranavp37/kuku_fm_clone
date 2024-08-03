@@ -23,14 +23,14 @@ class HomeScreen extends StatelessWidget {
               const CustomAppBar(),
 
               const SizedBox(
-                height: 10,
+                height: 5,
               ),
 
               //CarouseSlider
               const CarouseSlider(),
 
               const SizedBox(
-                height: 15,
+                height: 5,
               ),
 
               //titile
@@ -75,7 +75,7 @@ class HomeScreen extends StatelessWidget {
               const MainTitleWiget(titile: 'New Release'),
 
               const SizedBox(
-                height: 5.0,
+                height: 5,
               ),
 
               //cards

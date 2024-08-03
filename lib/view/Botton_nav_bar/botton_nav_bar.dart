@@ -40,8 +40,10 @@ class _BottonNavBarState extends State<BottonNavBar> {
           selectedItemColor: const Color(0xffffffff),
           backgroundColor: const Color(0xff1a1b1f),
           type: BottomNavigationBarType.fixed,
-          unselectedLabelStyle: const TextStyle(fontFamily: appfonts),
-          selectedLabelStyle: const TextStyle(fontFamily: appfonts),
+          unselectedLabelStyle:
+              const TextStyle(fontSize: 14, fontFamily: appfonts),
+          selectedLabelStyle:
+              const TextStyle(fontSize: 14, fontFamily: appfonts),
           items: const [
             BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
             BottomNavigationBarItem(
