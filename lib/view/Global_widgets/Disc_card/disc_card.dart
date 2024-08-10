@@ -1,32 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:kuku_fm_clone/utils/font_const.dart';
-import 'package:kuku_fm_clone/view/Global_widgets/Disc_card/disc_card.dart';
 
-class ListeningSchedule extends StatelessWidget {
-  const ListeningSchedule({
+class RecentDiscCard extends StatelessWidget {
+  const RecentDiscCard({
     super.key,
   });
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 20),
-      child: SingleChildScrollView(
-        scrollDirection: Axis.horizontal,
-        child: Row(
-            children: List.generate(
-                2,
-                (index) =>
-                    index == 0 ? const RecentDiscCard() : _buildDiscAddMore())),
-      ),
-    );
-  }
-
-  Widget _buildDiscAddMore() {
     return SizedBox(
+      // color: Colors.amber.withOpacity(.4),
       height: 160,
       width: 205,
-      // color: Colors.amber.withOpacity(.4),
       child: Stack(
         children: [
           Positioned(
@@ -37,7 +22,10 @@ class ListeningSchedule extends StatelessWidget {
               width: 105,
               decoration: const BoxDecoration(
                 // color: Colors.red.withOpacity(.4),
-                color: Color(0xff3f434c),
+                image: DecorationImage(
+                    fit: BoxFit.cover,
+                    image: NetworkImage(
+                        'https://images.cdn.kukufm.com/w:384/f:webp/q:75/https://images.cdn.kukufm.com/f:webp/https://s3.ap-south-1.amazonaws.com/kukufm/channel_icons/d144a44c30f744fbb80d961e0181f67f_landscape_994.png')),
                 shape: BoxShape.circle,
               ),
               child: Center(
@@ -64,7 +52,11 @@ class ListeningSchedule extends StatelessWidget {
             width: 125,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(16.0),
-              color: const Color(0xff272a31),
+              image: const DecorationImage(
+                fit: BoxFit.cover,
+                image: NetworkImage(
+                    'https://images.cdn.kukufm.com/w:384/f:webp/q:75/https://images.cdn.kukufm.com/f:webp/https://s3.ap-south-1.amazonaws.com/kukufm/channel_icons/d144a44c30f744fbb80d961e0181f67f_landscape_994.png'),
+              ),
             ),
             child: Stack(
               alignment: Alignment.center,
@@ -74,10 +66,10 @@ class ListeningSchedule extends StatelessWidget {
                   width: 50,
                   decoration: const BoxDecoration(
                     shape: BoxShape.circle,
-                    color: Color(0xff3f434c),
+                    color: Colors.black54,
                   ),
                   child: const Center(
-                      child: Icon(color: Color(0xff828083), Icons.add)),
+                      child: Icon(color: Colors.white, Icons.play_arrow)),
                 ),
               ],
             ),
@@ -90,25 +82,12 @@ class ListeningSchedule extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.end,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Row(
-                  children: [
-                    Text(
-                      'Add Now',
-                      style: TextStyle(
-                        fontFamily: appfonts,
-                        fontSize: 16,
-                        color: Colors.white,
-                      ),
-                    ),
-                    SizedBox(
-                      width: 10,
-                    ),
-                    Icon(
-                      Icons.arrow_forward_ios,
-                      color: Colors.white,
-                      size: 16,
-                    )
-                  ],
+                Text(
+                  'Episode 1/97',
+                  style: TextStyle(
+                      fontFamily: appfonts,
+                      fontSize: 18,
+                      color: Color(0xff595a5c)),
                 ),
               ],
             ),

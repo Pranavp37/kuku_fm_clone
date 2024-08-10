@@ -33,7 +33,7 @@ class _BottonNavBarState extends State<BottonNavBar> {
             });
           },
           currentIndex: currentTapIndex,
-          iconSize: 30,
+          iconSize: 26,
           selectedFontSize: 15,
           unselectedFontSize: 15,
           unselectedItemColor: const Color(0xff7c7d80),
@@ -41,19 +41,75 @@ class _BottonNavBarState extends State<BottonNavBar> {
           backgroundColor: const Color(0xff1a1b1f),
           type: BottomNavigationBarType.fixed,
           unselectedLabelStyle:
-              const TextStyle(fontSize: 14, fontFamily: appfonts),
+              const TextStyle(fontSize: 13, fontFamily: appfonts),
           selectedLabelStyle:
-              const TextStyle(fontSize: 14, fontFamily: appfonts),
+              const TextStyle(fontSize: 13, fontFamily: appfonts),
           items: const [
-            BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
             BottomNavigationBarItem(
-                icon: Icon(Icons.chat_outlined), label: 'Chat'),
+                activeIcon: ImageIcon(
+                  AssetImage(
+                    'assets/icons/home (1).png',
+                  ),
+                ),
+                icon: Padding(
+                  padding: EdgeInsets.only(bottom: 5),
+                  child: ImageIcon(AssetImage(
+                    'assets/icons/home.png',
+                  )),
+                ),
+                label: 'Home'),
             BottomNavigationBarItem(
-                icon: Icon(Icons.shopping_bag_outlined), label: 'Store'),
+                activeIcon: ImageIcon(
+                  AssetImage(
+                    'assets/icons/comment (1).png',
+                  ),
+                ),
+                icon: Padding(
+                  padding: EdgeInsets.only(bottom: 5),
+                  child: ImageIcon(AssetImage(
+                    'assets/icons/comment.png',
+                  )),
+                ),
+                label: 'Chat'),
             BottomNavigationBarItem(
-                icon: Icon(Icons.search_rounded), label: 'Search'),
+                activeIcon: ImageIcon(
+                  AssetImage(
+                    'assets/icons/bag (1).png',
+                  ),
+                ),
+                icon: Padding(
+                  padding: EdgeInsets.only(bottom: 5),
+                  child: ImageIcon(AssetImage(
+                    'assets/icons/bag.png',
+                  )),
+                ),
+                label: 'Store'),
             BottomNavigationBarItem(
-                icon: Icon(Icons.person_outline), label: 'My Space'),
+                activeIcon: ImageIcon(
+                  AssetImage(
+                    'assets/icons/search.png',
+                  ),
+                ),
+                icon: Padding(
+                  padding: EdgeInsets.only(bottom: 5),
+                  child: ImageIcon(AssetImage(
+                    'assets/icons/search-interface-symbol.png',
+                  )),
+                ),
+                label: 'Search'),
+            BottomNavigationBarItem(
+                activeIcon: ImageIcon(
+                  AssetImage(
+                    'assets/icons/user (1).png',
+                  ),
+                ),
+                icon: Padding(
+                  padding: EdgeInsets.only(bottom: 5),
+                  child: ImageIcon(AssetImage(
+                    'assets/icons/person.png',
+                  )),
+                ),
+                label: 'My Space'),
           ]),
     );
   }

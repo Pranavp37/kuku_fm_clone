@@ -21,12 +21,12 @@ class BonusRowContainer extends StatelessWidget {
       width: double.infinity,
       height: 95,
       decoration: BoxDecoration(
-          image: DecorationImage(
-              fit: BoxFit.cover,
-              image: istrue
-                  ? const NetworkImage(
-                      'https://img.pikbest.com/wp/202346/purple-minimalist-illustration-style-cartoon-of-coins-flowing-into-a-safe-box-with-the-concept-finance-savings-cost-reduction-and-earnings-on-background-banner_9619194.jpg!bw700')
-                  : const NetworkImage('')),
+          image: istrue
+              ? const DecorationImage(
+                  fit: BoxFit.cover,
+                  image: NetworkImage(
+                      'https://img.pikbest.com/wp/202346/purple-minimalist-illustration-style-cartoon-of-coins-flowing-into-a-safe-box-with-the-concept-finance-savings-cost-reduction-and-earnings-on-background-banner_9619194.jpg!bw700'))
+              : null,
           color: const Color(0xff272a31),
           borderRadius: BorderRadius.circular(15)),
       child: Row(

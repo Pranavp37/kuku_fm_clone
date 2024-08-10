@@ -4,6 +4,7 @@ import 'package:flutter/widgets.dart';
 import 'package:kuku_fm_clone/utils/color_constant.dart';
 import 'package:kuku_fm_clone/utils/font_const.dart';
 import 'package:kuku_fm_clone/view/Store_screen/widgets/Buy_coins_tab/buy_coins_tabbar.dart';
+import 'package:kuku_fm_clone/view/Store_screen/widgets/Earn_coins/earn_coins.dart';
 
 class StoreScreen extends StatefulWidget {
   const StoreScreen({super.key});
@@ -54,14 +55,7 @@ class _StoreScreenState extends State<StoreScreen> {
         ),
         body: const TabBarView(children: [
           BuyCoinsTabbar(),
-          Text(
-            'Store',
-            style: TextStyle(
-              fontSize: 25,
-              color: ColorConstant.whiteColor,
-              fontFamily: appfonts,
-            ),
-          ),
+          EarnCoins(),
         ]),
       ),
     );

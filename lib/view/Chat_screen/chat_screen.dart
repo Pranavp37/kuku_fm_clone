@@ -12,7 +12,8 @@ class ChatScreen extends StatelessWidget {
     return Scaffold(
         backgroundColor: ColorConstant.mainTheamColor,
         body: Container(
-          padding: const EdgeInsets.symmetric(vertical: 50, horizontal: 18),
+          padding: const EdgeInsets.only(left: 18, right: 18, top: 50),
+          // padding: const EdgeInsets.symmetric(vertical: 50, horizontal: 18),
           child: SingleChildScrollView(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
