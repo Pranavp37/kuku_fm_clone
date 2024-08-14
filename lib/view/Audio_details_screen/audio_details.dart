@@ -13,17 +13,32 @@ import 'package:kuku_fm_clone/view/Audio_details_screen/widgets/Title_play_image
 import 'package:kuku_fm_clone/view/Audio_details_screen/widgets/views_rating_review/views_rate_reviews.dart';
 
 class AudioDetails extends StatelessWidget {
-  const AudioDetails({super.key});
+  const AudioDetails(
+      {super.key,
+      required this.audiotitle,
+      required this.audioimage,
+      required this.description,
+      required this.like});
+  final String audiotitle;
+  final String audioimage;
+  final String description;
+  final String like;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: ColorConstant.mainTheamColor,
       appBar: AppBar(
-        backgroundColor: ColorConstant.mainTheamColor,
-        title: const Text(
-          'Doctor Miracle,MD',
-          style: TextStyle(
+        backgroundColor: const Color(0xff300808),
+        leading: InkWell(
+          onTap: () => Navigator.pop(context),
+          child: const Icon(
+            Icons.arrow_back,
+            color: ColorConstant.whiteColor,
+          ),
+        ),
+        title: Text(
+          audiotitle,
+          style: const TextStyle(
             color: Colors.white,
             fontFamily: appfonts,
             fontSize: 20,
@@ -43,6 +58,11 @@ class AudioDetails extends StatelessWidget {
       body: DefaultTabController(
         length: 4,
         child: Container(
+          decoration: const BoxDecoration(
+              gradient: LinearGradient(
+                  begin: Alignment.topCenter,
+                  end: Alignment.bottomCenter,
+                  colors: [Color(0xff300808), Color(0xff1a1b1f)])),
           padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
           child: SingleChildScrollView(
             child: Column(
@@ -50,7 +70,9 @@ class AudioDetails extends StatelessWidget {
               children: [
                 //title play image
 
-                const TitlePlayImage(),
+                TitlePlayImage(
+                  audioimage: audioimage,
+                ),
 
                 //
 
@@ -80,7 +102,9 @@ class AudioDetails extends StatelessWidget {
                 ),
 
                 // views /rating/reviews
-                const ViewsRateReviews(),
+                ViewsRateReviews(
+                  like: like,
+                ),
 
                 //
                 const SizedBox(
@@ -105,11 +129,12 @@ class AudioDetails extends StatelessWidget {
                 ),
 
                 //
-                const ExpandableText(
-                    style: TextStyle(color: Colors.white, fontFamily: appfonts),
+                ExpandableText(
+                    style: const TextStyle(
+                        color: Colors.white, fontFamily: appfonts),
                     maxLines: 3,
                     collapseText: 'less',
-                    "Dive into the extraordinary life of Jacob Ye, a seemingly ordinary intern doctor whose fate takes a dramatic turn when he stumbles upon ancient knowledge that grants him unparalleled medical skills and mastery of magic arts. Set against the backdrop of modern-day challenges Jacob's journey is a harmonious blend of medical drama, mystical encounters, and heartwarming romance. Join Jacob as he navigates the complexities of life, love, and medicine, proving that miracles can happen, especially when they're least expected. Tune in to 'Doctor Miracle, MD,' for a listening experience that will heal, inspire, and captivate your heart.",
+                    description,
                     expandText: 'more'),
 
                 //
@@ -144,14 +169,16 @@ class AudioDetails extends StatelessWidget {
                         'Cast & Crew',
                       ),
                     ]),
-                const SizedBox(
+                SizedBox(
                   height: 400,
                   child: TabBarView(
                     children: [
-                      EpisodePage(),
-                      Reviews(),
-                      MoreLikeThis(),
-                      CastAndCrew(),
+                      EpisodePage(
+                        image: audioimage,
+                      ),
+                      const Reviews(),
+                      const MoreLikeThis(),
+                      const CastAndCrew(),
                     ],
                   ),
                 ),

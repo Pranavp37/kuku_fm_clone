@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:kuku_fm_clone/utils/color_constant.dart';
 
 class ViewsRateReviews extends StatelessWidget {
-  const ViewsRateReviews({super.key});
+  const ViewsRateReviews({super.key, required this.like});
+  final String like;
 
   @override
   Widget build(BuildContext context) {
@@ -10,17 +11,17 @@ class ViewsRateReviews extends StatelessWidget {
       scrollDirection: Axis.horizontal,
       child: Row(
         children: [
-          const Column(
+          Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                '▶ 239k',
-                style: TextStyle(
+                '▶ ${like}k',
+                style: const TextStyle(
                   color: ColorConstant.whiteColor,
                   fontSize: 20,
                 ),
               ),
-              Text(
+              const Text(
                 'Listens',
                 style: TextStyle(
                     color: ColorConstant.secondaryGrayColor, fontSize: 16),

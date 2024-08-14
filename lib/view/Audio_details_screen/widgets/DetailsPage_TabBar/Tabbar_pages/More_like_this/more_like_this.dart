@@ -2,12 +2,15 @@ import 'dart:math';
 
 import 'package:expandable_text/expandable_text.dart';
 import 'package:flutter/material.dart';
+import 'package:kuku_fm_clone/dummydb.dart';
 import 'package:kuku_fm_clone/utils/color_constant.dart';
 
 import 'package:kuku_fm_clone/utils/font_const.dart';
 
 class MoreLikeThis extends StatelessWidget {
-  const MoreLikeThis({super.key});
+  const MoreLikeThis({
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -45,7 +48,7 @@ class MoreLikeThis extends StatelessWidget {
             ],
           ),
           const SizedBox(
-            height: 5,
+            height: 15,
           ),
           ListView.separated(
               shrinkWrap: true,
@@ -59,19 +62,20 @@ class MoreLikeThis extends StatelessWidget {
                             height: 120,
                             width: 125,
                             fit: BoxFit.cover,
-                            'https://static1.cbrimages.com/wordpress/wp-content/uploads/2021/09/encanto-header.jpg'),
+                            Dummydb.top10[index + 1]['imgurl'].toString()),
                       ),
                       const SizedBox(
                         width: 14,
                       ),
-                      const Column(
+                      Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
-                            'Whispers on the Airwaves',
-                            style: TextStyle(color: Colors.white, fontSize: 16),
+                            Dummydb.top10[index + 1]['name'].toString(),
+                            style: const TextStyle(
+                                color: Colors.white, fontSize: 16),
                           ),
-                          Text(
+                          const Text(
                             '5.0(2.6k+listens).02 hr 3 mint',
                             style: TextStyle(
                                 color: ColorConstant.secondaryGrayColor,

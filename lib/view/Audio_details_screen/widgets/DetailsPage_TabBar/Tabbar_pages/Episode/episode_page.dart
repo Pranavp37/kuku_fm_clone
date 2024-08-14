@@ -3,7 +3,8 @@ import 'package:kuku_fm_clone/utils/color_constant.dart';
 import 'package:kuku_fm_clone/utils/font_const.dart';
 
 class EpisodePage extends StatelessWidget {
-  const EpisodePage({super.key});
+  const EpisodePage({super.key, required this.image});
+  final String image;
 
   @override
   Widget build(BuildContext context) {
@@ -49,10 +50,7 @@ class EpisodePage extends StatelessWidget {
                       ClipRRect(
                         borderRadius: BorderRadius.circular(20),
                         child: Image.network(
-                            height: 80,
-                            width: 90,
-                            fit: BoxFit.cover,
-                            'https://static1.cbrimages.com/wordpress/wp-content/uploads/2021/09/encanto-header.jpg'),
+                            height: 80, width: 90, fit: BoxFit.cover, image),
                       ),
                       const SizedBox(
                         width: 18,

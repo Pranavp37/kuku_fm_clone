@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
+import 'package:flutter/widgets.dart';
 
 class TitlePlayImage extends StatelessWidget {
-  const TitlePlayImage({super.key});
+  const TitlePlayImage({super.key, required this.audioimage});
+  final String audioimage;
 
   @override
   Widget build(BuildContext context) {
@@ -10,10 +13,8 @@ class TitlePlayImage extends StatelessWidget {
       width: MediaQuery.of(context).size.width / 1.1,
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(20),
-          image: const DecorationImage(
-              fit: BoxFit.cover,
-              image: NetworkImage(
-                  'https://static1.cbrimages.com/wordpress/wp-content/uploads/2021/09/encanto-header.jpg'))),
+          image: DecorationImage(
+              fit: BoxFit.cover, image: NetworkImage(audioimage))),
       child: Center(
         child: Container(
           height: 70,

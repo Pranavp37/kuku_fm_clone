@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:kuku_fm_clone/utils/color_constant.dart';
 import 'package:kuku_fm_clone/utils/font_const.dart';
+import 'package:skeletonizer/skeletonizer.dart';
 
 class CustomAppBar extends StatelessWidget {
   const CustomAppBar({
@@ -15,14 +16,15 @@ class CustomAppBar extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           const CircleAvatar(
-            radius: 21,
-            backgroundColor: Colors.orange,
-            child: Text(
-              'P',
-              style: TextStyle(
-                  fontFamily: appfonts, color: Colors.white, fontSize: 28),
-            ),
-          ),
+              radius: 21,
+              backgroundColor: Colors.orange,
+              child: Skeleton.ignore(
+                child: Text(
+                  'P',
+                  style: TextStyle(
+                      fontFamily: appfonts, color: Colors.white, fontSize: 28),
+                ),
+              )),
           SizedBox(
             width: 200,
             child: TextFormField(
@@ -53,24 +55,28 @@ class CustomAppBar extends StatelessWidget {
               ),
             ),
           ),
-          const CircleAvatar(
-            radius: 22,
-            backgroundColor: ColorConstant.grayLightColor,
-            child: Text(
-              'अA',
-              style: TextStyle(
-                color: Colors.white,
-                fontSize: 20,
+          const Skeleton.ignore(
+            child: CircleAvatar(
+              radius: 22,
+              backgroundColor: ColorConstant.grayLightColor,
+              child: Text(
+                'अA',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 20,
+                ),
               ),
             ),
           ),
-          const CircleAvatar(
-              radius: 22,
-              backgroundColor: ColorConstant.grayLightColor,
-              child: Icon(
-                Icons.shopping_bag_rounded,
-                color: Colors.white,
-              )),
+          const Skeleton.ignore(
+            child: CircleAvatar(
+                radius: 22,
+                backgroundColor: ColorConstant.grayLightColor,
+                child: Icon(
+                  Icons.shopping_bag_rounded,
+                  color: Colors.white,
+                )),
+          ),
         ],
       ),
     );

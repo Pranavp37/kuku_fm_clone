@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:kuku_fm_clone/dummydb.dart';
 import 'package:kuku_fm_clone/utils/color_constant.dart';
+import 'package:kuku_fm_clone/view/Chat_screen/chat_page_screen/chat_page_screen.dart';
 import 'package:kuku_fm_clone/view/Chat_screen/wigets/Chat_profile_Widget/chat_profile.dart';
 import 'package:kuku_fm_clone/view/Chat_screen/wigets/chat_ti/chat_screen_title.dart';
 
@@ -34,7 +35,20 @@ class ChatScreen extends StatelessWidget {
                       scrollDirection: Axis.horizontal,
                       children: List.generate(
                         Dummydb.chatprofile.length,
-                        (index) => ChatProfile(index: index),
+                        (index) => ChatProfile(
+                            onTap: () => Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => ChatPageScreen(
+                                    chatusername: Dummydb.chatprofile[index]
+                                            ['name']
+                                        .toString(),
+                                    chatuserimag: Dummydb.chatprofile[index]
+                                            ['imageUrl']
+                                        .toString(),
+                                  ),
+                                )),
+                            index: index),
                       )),
                 ),
 
@@ -58,7 +72,19 @@ class ChatScreen extends StatelessWidget {
                       scrollDirection: Axis.horizontal,
                       children: List.generate(
                         1,
-                        (index) => const ChatProfile(index: 2),
+                        (index) => ChatProfile(
+                            onTap: () => Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => ChatPageScreen(
+                                    chatusername: Dummydb.chatprofile[2]['name']
+                                        .toString(),
+                                    chatuserimag: Dummydb.chatprofile[2]
+                                            ['imageUrl']
+                                        .toString(),
+                                  ),
+                                )),
+                            index: 2),
                       )),
                 ),
 
@@ -82,7 +108,20 @@ class ChatScreen extends StatelessWidget {
                       scrollDirection: Axis.horizontal,
                       children: List.generate(
                         5,
-                        (index) => ChatProfile(index: index + 3),
+                        (index) => ChatProfile(
+                            onTap: () => Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => ChatPageScreen(
+                                    chatusername: Dummydb.chatprofile[index + 3]
+                                            ['name']
+                                        .toString(),
+                                    chatuserimag: Dummydb.chatprofile[index + 3]
+                                            ['imageUrl']
+                                        .toString(),
+                                  ),
+                                )),
+                            index: index + 3),
                       )),
                 ),
 
@@ -107,6 +146,18 @@ class ChatScreen extends StatelessWidget {
                       children: List.generate(
                         5,
                         (index) => ChatProfile(
+                          onTap: () => Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => ChatPageScreen(
+                                  chatusername: Dummydb.chatprofile2[index]
+                                          ['name']
+                                      .toString(),
+                                  chatuserimag: Dummydb.chatprofile2[index]
+                                          ['imageUrl']
+                                      .toString(),
+                                ),
+                              )),
                           index: index,
                           imagechage: false,
                         ),
