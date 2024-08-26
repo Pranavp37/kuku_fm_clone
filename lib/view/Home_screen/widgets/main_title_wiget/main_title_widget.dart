@@ -5,8 +5,9 @@ class MainTitleWiget extends StatelessWidget {
   const MainTitleWiget({
     super.key,
     required this.titile,
+    this.onPressed,
   });
-
+  final void Function()? onPressed;
   final String titile;
 
   @override
@@ -26,7 +27,7 @@ class MainTitleWiget extends StatelessWidget {
             ),
           ),
           IconButton(
-              onPressed: () {},
+              onPressed: onPressed,
               icon: const Icon(
                 size: 18,
                 Icons.arrow_forward_ios,

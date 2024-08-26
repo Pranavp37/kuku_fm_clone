@@ -1,3 +1,5 @@
+import 'package:flutter/material.dart';
+
 class Dummydb {
   static const carouselImage = [
     'https://images.cdn.kukufm.com/w:384/f:webp/q:75/https://images.cdn.kukufm.com/f:webp/https://s3.ap-south-1.amazonaws.com/kukufm/channel_icons/70d6a96eed8c4459bc2fd5a24c432271_landscape_879.jpg',
@@ -378,6 +380,96 @@ class Dummydb {
           "12th Fail hone ke baad kya koi PCS ke baare mein soch sakta hai? Kya jiske muh se sahi Hindi ke shabd na nikle wo English ke sath IPS ki taiyari kar sakta hai? Kaun hai ye shakhs? Aur aakhir aisa kya alag hai iski kahani mein? Janna chahte hai, to aapko ye audiobook zaroor sunni hogi! Kyunki ise sunne ke baad aapko bhi apne sapnon par yakeen hone lagega.",
       'like': '657',
     },
+  ];
+
+  static const netBanking = [
+    {
+      'bankimage':
+          'https://i.pinimg.com/736x/0d/5d/20/0d5d205ed9a508215737bdee0a81d425.jpg',
+      'bankname': 'SBI bank'
+    },
+    {
+      'bankimage':
+          'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNoQMLUXxpQbDeMQ_RUh-jjYxMqRR0xqfC-g&s',
+      'bankname': 'HDFC Bank'
+    },
+    {
+      'bankimage':
+          'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTi7pwMZWUkmI10EsCBFuk_Xl6RJ30vfOhJlQ&s',
+      'bankname': 'Axis Bank'
+    },
+    {
+      'bankimage':
+          'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXTquWKyILVQA1up7EFWrbirCvXTd4aKGGkA&s',
+      'bankname': 'Yes Bank'
+    },
+    {
+      'bankimage':
+          'https://i.pinimg.com/736x/86/f4/d6/86f4d647b439f5f07e04f6ec15790cd7.jpg',
+      'bankname': 'Airtel Payment'
+    },
+  ];
+  static const onlinePay = [
+    {
+      'bankimage':
+          'https://www.medianama.com/wp-content/uploads/2018/03/Phonepe.jpg-e1630297416388.jpg',
+      'bankname': 'Phonepe'
+    },
+    {
+      'bankimage':
+          'https://cdn.icon-icons.com/icons2/1178/PNG/512/amazon-a_82056.png',
+      'bankname': 'Amazonepay'
+    },
+    {
+      'bankimage':
+          'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYtPQHhBl87Xa2lUbWrhtaZyGke7pdwf1FjQ&s',
+      'bankname': 'Jiomoney'
+    },
+    {
+      'bankimage':
+          'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScUo_FyIk2mUt0FXD5498v4bBjhbjj2OAAQg&s',
+      'bankname': 'Olamoney'
+    },
+    {
+      'bankimage':
+          'https://i.pinimg.com/736x/86/f4/d6/86f4d647b439f5f07e04f6ec15790cd7.jpg',
+      'bankname': 'Airtelmoney'
+    },
+  ];
+
+  static const List<Map<String, dynamic>> buttomSheetlang = [
+    {
+      'language': 'हिन्दी',
+      'color': Colors.red,
+    },
+    {
+      'language': 'தமிழ்',
+      'color': Colors.yellow,
+    },
+    {
+      'language': 'मराठी',
+      'color': Colors.blue,
+    },
+    {
+      'language': 'తెలుగు',
+      'color': Colors.orange,
+    },
+    {
+      'language': 'ಕನ್ನಡ',
+      'color': Colors.pink,
+    },
+    {
+      'language': 'മലയാളം',
+      'color': Colors.red,
+    },
+    {
+      'language': 'ਪੰਜਾਬੀ',
+      'color': Colors.green,
+    },
+    {
+      'language': 'English',
+      'color': Colors.lightGreen,
+    }
   ];
 }
 

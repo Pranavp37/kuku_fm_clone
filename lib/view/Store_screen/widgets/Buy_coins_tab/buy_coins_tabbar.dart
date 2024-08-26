@@ -3,6 +3,7 @@ import 'package:kuku_fm_clone/utils/color_constant.dart';
 import 'package:kuku_fm_clone/utils/font_const.dart';
 import 'package:kuku_fm_clone/view/Store_screen/widgets/Bonus_Row_container/bonus_row_container.dart';
 import 'package:kuku_fm_clone/view/Store_screen/widgets/buyCointitle/buy_coin_title.dart';
+import 'package:kuku_fm_clone/view/payment_details_screen/payment_details.dart';
 
 class BuyCoinsTabbar extends StatelessWidget {
   const BuyCoinsTabbar({super.key});
@@ -31,7 +32,13 @@ class BuyCoinsTabbar extends StatelessWidget {
 
             //one Time Offer Row Card
 
-            const BonusRowContainer(
+            BonusRowContainer(
+              onTap: () => Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) =>
+                        const PaymentDetails(coin: 200, rupees: 99),
+                  )),
               coins: 200,
               bonus: '250',
               price: 99,
@@ -41,7 +48,13 @@ class BuyCoinsTabbar extends StatelessWidget {
               height: 20,
             ),
 
-            const BonusRowContainer(
+            BonusRowContainer(
+              onTap: () => Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) =>
+                        const PaymentDetails(coin: 200, rupees: 99),
+                  )),
               coins: 200,
               bonus: '260',
               price: 99,
@@ -59,7 +72,13 @@ class BuyCoinsTabbar extends StatelessWidget {
               height: 20,
             ),
 
-            const BonusRowContainer(
+            BonusRowContainer(
+              onTap: () => Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) =>
+                        const PaymentDetails(coin: 20, rupees: 9),
+                  )),
               coins: 20,
               bonus: '100',
               price: 9,
@@ -77,7 +96,13 @@ class BuyCoinsTabbar extends StatelessWidget {
               height: 20,
             ),
 
-            const BonusRowContainer(
+            BonusRowContainer(
+              onTap: () => Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) =>
+                        const PaymentDetails(coin: 40, rupees: 19),
+                  )),
               coins: 40,
               bonus: '100',
               price: 19,
@@ -88,7 +113,13 @@ class BuyCoinsTabbar extends StatelessWidget {
               height: 20,
             ),
 
-            const BonusRowContainer(
+            BonusRowContainer(
+              onTap: () => Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) =>
+                        const PaymentDetails(coin: 80, rupees: 39),
+                  )),
               coins: 80,
               bonus: '112',
               price: 39,
@@ -106,7 +137,13 @@ class BuyCoinsTabbar extends StatelessWidget {
               height: 20,
             ),
 
-            const BonusRowContainer(
+            BonusRowContainer(
+              onTap: () => Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) =>
+                        const PaymentDetails(coin: 400, rupees: 199),
+                  )),
               coins: 400,
               bonus: '150',
               price: 199,
@@ -117,7 +154,13 @@ class BuyCoinsTabbar extends StatelessWidget {
               height: 20,
             ),
 
-            const BonusRowContainer(
+            BonusRowContainer(
+              onTap: () => Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) =>
+                        const PaymentDetails(coin: 800, rupees: 399),
+                  )),
               coins: 800,
               bonus: '200',
               price: 399,

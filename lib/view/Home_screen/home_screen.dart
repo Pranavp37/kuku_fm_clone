@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:kuku_fm_clone/dummydb.dart';
 import 'package:kuku_fm_clone/utils/color_constant.dart';
 import 'package:kuku_fm_clone/view/Audio_details_screen/audio_details.dart';
+import 'package:kuku_fm_clone/view/Global_widgets/card_List/card_list.dart';
 import 'package:kuku_fm_clone/view/Global_widgets/cards/cards_widget.dart';
 import 'package:kuku_fm_clone/view/Global_widgets/number_card/number_cards.dart';
 import 'package:kuku_fm_clone/view/Home_screen/widgets/carouse_Widget/carouse_slider.dart';
@@ -18,27 +19,34 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  bool _loading = true;
-  bool _firstRun = true;
+  bool loading = true;
+  bool firstRun = true;
 
   @override
   void initState() {
     super.initState();
-    _startLoading();
+    startLoading();
   }
 
-  Future _startLoading() async {
-    if (_firstRun) {
-      await Future.delayed(const Duration(seconds: 2));
+  Future startLoading() async {
+    if (firstRun) {
+      await Future.delayed(const Duration(seconds: 1));
       setState(() {
-        _loading = false;
-        _firstRun = false;
+        loading = false;
+        firstRun = false;
       });
     } else {
       setState(() {
-        _loading = false;
+        loading = false;
       });
     }
+  }
+
+  int? selectedtab;
+  void oniteamtapped(int index) {
+    setState(() {
+      selectedtab = index;
+    });
   }
 
   @override
@@ -47,7 +55,7 @@ class _HomeScreenState extends State<HomeScreen> {
       backgroundColor: ColorConstant.mainTheamColor,
       body: SafeArea(
         child: Skeletonizer(
-          enabled: _loading,
+          enabled: loading,
           effect: const ShimmerEffect(highlightColor: Colors.white),
           child: ListView(
             children: [
@@ -66,8 +74,11 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
 
               //titile
-              const MainTitleWiget(
+               MainTitleWiget(
                 titile: 'Your Listening Schedule',
+                onPressed:  () {
+                  
+                } ,
               ),
               const SizedBox(
                 height: 5,
@@ -117,7 +128,14 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
 
               //newRelease
-              const MainTitleWiget(titile: 'New Release'),
+              MainTitleWiget(
+                titile: 'New Release',
+                onPressed: () => Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const CardList(),
+                    )),
+              ),
 
               const SizedBox(
                 height: 5,

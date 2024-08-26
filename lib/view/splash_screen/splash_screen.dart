@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:kuku_fm_clone/utils/color_constant.dart';
 import 'package:kuku_fm_clone/view/Botton_nav_bar/botton_nav_bar.dart';
+import 'package:kuku_fm_clone/view/login_Screen/login_screen.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -19,7 +20,7 @@ class _SplashScreenState extends State<SplashScreen> {
       () => Navigator.pushReplacement(
           context,
           MaterialPageRoute(
-            builder: (context) => const BottonNavBar(),
+            builder: (context) => const LoginScreen(),
           )),
     );
     super.initState();
